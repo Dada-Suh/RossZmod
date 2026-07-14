@@ -24,9 +24,16 @@ axiom mul_assoc (a b c : Z) : (a * b) * c = a * (b * c)
 axiom mul_comm  (a b : Z)   : a * b = b * a
 axiom mul_one   (a : Z)     : a * 1 = a
 axiom mul_add   (a b c : Z) : a * (b + c) = a * b + a * c
-axiom zero_ne_one : (0 : Z) ≠ 1
+axiom Pos : Z → Prop
+axiom pos_nonempty : ∃ x : Z, Pos x
+axiom pos_add {a b : Z} : Pos a → Pos b → Pos (a + b)
+axiom pos_mul {a b : Z} : Pos a → Pos b → Pos (a * b)
+axiom trichotomy (a : Z) : Pos a ∨ a = 0 ∨ Pos (-a)
+axiom not_pos_zero : ¬ Pos (0 : Z)
 
 def Divides (a b : Z) : Prop := ∃ k, b = a * k
+
+infix:50 " ∣ " => Divides
 
 theorem zero_add (a : Z) : 0 + a = a := by
   rw [add_comm, add_zero]
@@ -48,8 +55,13 @@ theorem right_distrib (a b c : Z) : (b + c) * a = b * a + c * a := by
 theorem zero_mul (a : Z) : 0 * a = 0 := by
   rw [mul_comm, mul_zero]
 
-
-
+theorem one_ne_zero : (1 : Z) ≠ 0 := by
+  intro h
+  obtain ⟨w, hw⟩ := pos_nonempty
+  have hzero : w = 0 := by
+    rw [← mul_one w, h, mul_zero]
+  rw [hzero] at hw
+  exact not_pos_zero hw
 end Z
 
 TheoremDoc Z.mul_add as "mul_add" in "Axioms"
