@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.23.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-23\n"
+"POT-Creation-Date: 2026-07-14\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -12,10 +12,6 @@ msgstr "Project-Id-Version: Game v4.23.0\n"
 msgid "level completed with warnings… 🎭"
 msgstr ""
 
-#: Game.Levels.DemoWorld.L01_HelloWorld
-msgid "Hello World"
-msgstr ""
-
 #: Game
 msgid "This text appears on the starting page where one selects the world/level to play.\n"
 "You can use **markdown**."
@@ -23,15 +19,6 @@ msgstr ""
 
 #: GameServer.RpcHandlers
 msgid "level completed! 🎉"
-msgstr ""
-
-#: Game
-msgid "Hello World Game"
-msgstr ""
-
-#. §0: `«{g}»`
-#: Game.Levels.DemoWorld.L01_HelloWorld
-msgid "You should use §0 now."
 msgstr ""
 
 #: GameServer.RpcHandlers
@@ -51,28 +38,47 @@ msgid "Here you can put additional information about the game. It is accessible\
 "Use **markdown**."
 msgstr ""
 
-#: Game.Levels.DemoWorld.L01_HelloWorld
-msgid "This last message appears if the level is solved."
+#: Game
+msgid "Ross ℤ Game"
 msgstr ""
 
-#: Game.Levels.DemoWorld.L01_HelloWorld
-msgid "This text is shown as first message when the level is played.\n"
-"You can insert hints in the proof below. They will appear in this side panel\n"
-"depending on the proof a user provides."
+#: Game.Levels.DivisibilityWorld.L01_Linearity
+msgid "Rewrites using an equation."
 msgstr ""
 
-#: Game.Levels.DemoWorld
-msgid "This introduction is shown before one enters level 1 of the demo world. Use markdown."
+#: Game.Levels.DivisibilityWorld
+msgid "The Ross axioms. Nothing else. No Mathlib, no induction, no shortcuts."
 msgstr ""
 
-#. §0: `«{h}»`
-#. §1: `«{g}»`
-#: Game.Levels.DemoWorld.L01_HelloWorld
-msgid "You can either start using §0 or §1."
+#: Game.Levels.DivisibilityWorld.L01_Linearity
+msgid "Linearity"
 msgstr ""
 
-#: Game.Levels.DemoWorld
-msgid "Demo World"
+#: Game.Levels.DivisibilityWorld
+msgid "Divisibility"
+msgstr ""
+
+#: Game.Levels.DivisibilityWorld.L01_Linearity
+msgid "name the witness"
+msgstr ""
+
+#: Game.Levels.DivisibilityWorld.L01_Linearity
+msgid "Divides a b unfolds to: exists k, b = a * k.\n"
+"\n"
+"To USE one, extract with obtain.\n"
+"To PROVE one, supply a witness."
+msgstr ""
+
+#: Game.Levels.DivisibilityWorld.L01_Linearity
+msgid "obtain the witnesses"
+msgstr ""
+
+#: Game.Levels.DivisibilityWorld.L01_Linearity
+msgid "Splits an existential into witness and property."
+msgstr ""
+
+#: Game.Levels.DivisibilityWorld.L01_Linearity
+msgid "Have and want, enforced by a compiler."
 msgstr ""
 
 #: Game
