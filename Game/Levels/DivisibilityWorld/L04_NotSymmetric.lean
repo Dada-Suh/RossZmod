@@ -24,7 +24,7 @@ Statement : ¬ (∀ a b : Z, Z.Divides a b → Z.Divides b a) := by
   Hint "h2 says 0 divides 1. Extract its witness and see what it claims."
   obtain ⟨k, hk⟩ := h2
   rw [Z.zero_mul] at hk
-  exact Z.zero_ne_one hk
+  exact Z.zero_ne_one hk.symm
 
 Conclusion "
 The counterexample was 1 and 0.
@@ -32,5 +32,5 @@ The counterexample was 1 and 0.
 Read the statement!
 "
 
-NewTactic intro
-exact Z.zero_ne_one hk.symm
+NewTactic intro exact obtain rw
+NewTheorem Z.zero_mul Z.zero_ne_one Z.mul_zero

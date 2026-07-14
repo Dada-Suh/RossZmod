@@ -33,12 +33,16 @@ msgstr ""
 msgid "level completed! 🎉"
 msgstr ""
 
-#: GameServer.RpcHandlers
-msgid "intermediate goal solved! 🎉"
+#: Game.Levels.DivisibilityWorld.L04_NotSymmetric
+msgid "1 divides 0. Feed that to h."
 msgstr ""
 
 #: Game.Levels.DivisibilityWorld
 msgid "The Ross axioms. Nothing else."
+msgstr ""
+
+#: GameServer.RpcHandlers
+msgid "intermediate goal solved! 🎉"
 msgstr ""
 
 #: Game.Levels.DivisibilityWorld.L03_DividesZero
@@ -62,12 +66,16 @@ msgstr ""
 msgid "Rewrites using an equation."
 msgstr ""
 
-#: Game.Levels.DivisibilityWorld.L01_Linearity
-msgid "Linearity"
+#: Game.Levels.DivisibilityWorld.L04_NotSymmetric
+msgid "h2 says 0 divides 1. Extract its witness and see what it claims."
 msgstr ""
 
 #: Game.Levels.DivisibilityWorld
 msgid "Divisibility"
+msgstr ""
+
+#: Game.Levels.DivisibilityWorld.L01_Linearity
+msgid "Linearity"
 msgstr ""
 
 #: Game.Levels.DivisibilityWorld.L01_Linearity
@@ -97,6 +105,12 @@ msgstr ""
 msgid "level completed with warnings… 🎭"
 msgstr ""
 
+#: Game.Levels.DivisibilityWorld.L04_NotSymmetric
+msgid "The counterexample was 1 and 0.\n"
+"\n"
+"Read the statement!"
+msgstr ""
+
 #: Game
 msgid "You should use this game as a template for your own game and add your own levels."
 msgstr ""
@@ -118,6 +132,15 @@ msgstr ""
 msgid "Transitivity"
 msgstr ""
 
+#. §0: `intro h`
+#: Game.Levels.DivisibilityWorld.L04_NotSymmetric
+msgid "Assume the claim, then break it. §0"
+msgstr ""
+
+#: Game.Levels.DivisibilityWorld.L04_NotSymmetric
+msgid "The statement is false"
+msgstr ""
+
 #: Game.Levels.DivisibilityWorld.L01_Linearity
 msgid "name the witness"
 msgstr ""
@@ -126,6 +149,16 @@ msgstr ""
 msgid "If a divides b, and b divides c, does a divide c?\n"
 "\n"
 "Extract two witnesses. Build one."
+msgstr ""
+
+#: Game.Levels.DivisibilityWorld.L04_NotSymmetric
+msgid "Here is a printed claim.\n"
+"\n"
+"  For all a and b: if a divides b, then b divides a.\n"
+"\n"
+"Every level so far asked you to prove something true.\n"
+"\n"
+"This one does not."
 msgstr ""
 
 #: Game.Levels.DivisibilityWorld.L01_Linearity
