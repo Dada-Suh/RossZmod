@@ -12,15 +12,14 @@ msgstr "Project-Id-Version: Game v4.23.0\n"
 msgid "The witness was the product of the witnesses. Divisibility composes."
 msgstr ""
 
-#: GameServer.RpcHandlers
-msgid "level completed with warnings… 🎭"
-msgstr ""
-
 #: Game
 msgid "This text appears on the starting page where one selects the world/level to play.\n"
 "You can use **markdown**."
 msgstr ""
 
+#: Game.RossAxioms
+#: Game.RossAxioms
+#: Game.RossAxioms
 #: Game.RossAxioms
 #: Game.RossAxioms
 #: Game.RossAxioms
@@ -34,12 +33,68 @@ msgstr ""
 msgid "level completed! 🎉"
 msgstr ""
 
+#: GameServer.RpcHandlers
+msgid "intermediate goal solved! 🎉"
+msgstr ""
+
 #: Game.Levels.DivisibilityWorld
 msgid "The Ross axioms. Nothing else."
 msgstr ""
 
+#: Game.Levels.DivisibilityWorld.L03_DividesZero
+msgid "You need some k with 0 = a * k."
+msgstr ""
+
+#: Game.Levels.DivisibilityWorld.L03_DividesZero
+msgid "Every integer divides zero. Zero included.\n"
+"\n"
+"Zero, however, divides only zero. The relation is not symmetric, and that\n"
+"asymmetry is why it is called divisibility and not equality."
+msgstr ""
+
+#: Game.Levels.DivisibilityWorld.L03_DividesZero
+msgid "Does 7 divide 0?\n"
+"\n"
+"Read the definition. Do not trust your instinct."
+msgstr ""
+
+#: Game.Levels.DivisibilityWorld.L01_Linearity
+msgid "Rewrites using an equation."
+msgstr ""
+
+#: Game.Levels.DivisibilityWorld.L01_Linearity
+msgid "Linearity"
+msgstr ""
+
+#: Game.Levels.DivisibilityWorld
+msgid "Divisibility"
+msgstr ""
+
+#: Game.Levels.DivisibilityWorld.L01_Linearity
+msgid "Provides the term directly."
+msgstr ""
+
+#: Game.Levels.DivisibilityWorld.L02_Transitivity
+msgid "c = b * l, and b = a * k. Substitute."
+msgstr ""
+
+#: Game.Levels.DivisibilityWorld.L01_Linearity
+msgid "obtain the witnesses"
+msgstr ""
+
+#: Game.Levels.DivisibilityWorld.L01_Linearity
+msgid "Divides a b unfolds to: exists k, b = a * k.\n"
+"\n"
+"To USE one, extract with obtain.\n"
+"To PROVE one, supply a witness."
+msgstr ""
+
+#: Game.Levels.DivisibilityWorld.L02_Transitivity
+msgid "obtain both"
+msgstr ""
+
 #: GameServer.RpcHandlers
-msgid "intermediate goal solved! 🎉"
+msgid "level completed with warnings… 🎭"
 msgstr ""
 
 #: Game
@@ -59,26 +114,8 @@ msgstr ""
 msgid "Ross ℤ Game"
 msgstr ""
 
-#: Game.Levels.DivisibilityWorld.L01_Linearity
-msgid "Rewrites using an equation."
-msgstr ""
-
 #: Game.Levels.DivisibilityWorld.L02_Transitivity
 msgid "Transitivity"
-msgstr ""
-
-#: Game.Levels.DivisibilityWorld
-msgid "Divisibility"
-msgstr ""
-
-#: Game.Levels.DivisibilityWorld.L01_Linearity
-msgid "Linearity"
-msgstr ""
-
-#: Game.Levels.DivisibilityWorld.L02_Transitivity
-msgid "If a divides b, and b divides c, does a divide c?\n"
-"\n"
-"Extract two witnesses. Build one."
 msgstr ""
 
 #: Game.Levels.DivisibilityWorld.L01_Linearity
@@ -86,22 +123,9 @@ msgid "name the witness"
 msgstr ""
 
 #: Game.Levels.DivisibilityWorld.L02_Transitivity
-msgid "c = b * l, and b = a * k. Substitute."
-msgstr ""
-
-#: Game.Levels.DivisibilityWorld.L01_Linearity
-msgid "Provides the term directly."
-msgstr ""
-
-#: Game.Levels.DivisibilityWorld.L01_Linearity
-msgid "Divides a b unfolds to: exists k, b = a * k.\n"
+msgid "If a divides b, and b divides c, does a divide c?\n"
 "\n"
-"To USE one, extract with obtain.\n"
-"To PROVE one, supply a witness."
-msgstr ""
-
-#: Game.Levels.DivisibilityWorld.L01_Linearity
-msgid "obtain the witnesses"
+"Extract two witnesses. Build one."
 msgstr ""
 
 #: Game.Levels.DivisibilityWorld.L01_Linearity
@@ -112,10 +136,10 @@ msgstr ""
 msgid "Have and want, enforced by a compiler."
 msgstr ""
 
-#: Game
-msgid "Game Template"
+#: Game.Levels.DivisibilityWorld.L03_DividesZero
+msgid "Everything divides zero"
 msgstr ""
 
-#: Game.Levels.DivisibilityWorld.L02_Transitivity
-msgid "obtain both"
+#: Game
+msgid "Game Template"
 msgstr ""
