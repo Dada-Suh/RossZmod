@@ -1,34 +1,31 @@
-# Game Skeleton
+# Ross ℤ Game
 
-This is a template for creating a game with [lean4game](https://github.com/leanprover-community/lean4game/). It contains a single Level plus the files needed for a local development setup.
+Number theory as a Lean 4 game, built from the axioms used at the
+Ross Mathematics Program.
 
-The documentation about how to use this template are at the [lean4game repository](https://github.com/leanprover-community/lean4game/):
+## The axiom system
 
-* [Creating a new game](https://github.com/leanprover-community/lean4game/blob/main/doc/create_game.md)
-  * [Updating an existing game](https://github.com/leanprover-community/lean4game/blob/main/doc/update_game.md)
-  * [Running a game locally](https://github.com/leanprover-community/lean4game/blob/main/doc/running_locally.md)
+- Ring axioms, with **left distributivity only**. Right distributivity is a theorem.
+- Order axioms. No assumption that 1 is positive.
+- Well-Ordering. **No induction tactic.**
+- **No Mathlib.** The integers are an opaque type with eight axioms attached.
 
-## Quick start
+The starvation is the point. A player who can call `omega` has learned nothing.
 
-- Log into GitHub and click the "Use this template" > "Create a new repository" button.
-- Once you've created your repo from this template, click the green "Code" button and
-  choose "Codespaces" > "Create codespace on main".
-- After a few minutes, your Codespace should be ready for you to work on. You will see a message by
-  Vite in your console that should look like the following:
+## Worlds
 
-  ```
-  [relay] [nodemon] starting `node ./dist/src/index.js`
-  [client]
-  [client]   VITE v6.4.1  ready in 1278 ms
-  [client]
-  [client]   ➜  Local:   http://localhost:3000/
-  [client]   ➜  Network: http://10.0.14.235:3000/
-  [client] [vite-plugin-static-copy] Collected 13 items.
-  [relay] Server listening on 8080
-  [relay] API listening on undefined
-  [server] ⚠ [29/42] Replayed GameServer.Tactic.LetIntros
-  [server] warning: GameServer/Tactic/LetIntros.lean:28:34: `Lean.Expr.letFun?` has been deprecated: Use `Lean.Expr.isHave` instead
-  ```
+1. **Divisibility** — linearity, transitivity
+2. **Bézout** — division algorithm by WOP, gcd as least positive combination
+3. **Congruence** — equivalence relation, compatibility with + and ×
+4. **Units** — invertibility, and a level where the goal is to *disprove* a false statement
+5. **CRT** — the isomorphism, Euler, Fermat
 
-  CTRL + Click on http://localhost:3000/, and you will be referred to the version of your game hosted
-  in the Codespace.
+## Play
+
+https://adam.math.hhu.de/#/g/Dada-Suh/RossZmod
+
+## Status
+
+Divisibility world in progress.
+
+Built at the Ross Mathematics Program, 2026.

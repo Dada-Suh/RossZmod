@@ -27,4 +27,28 @@ axiom mul_add   (a b c : Z) : a * (b + c) = a * b + a * c
 
 def Divides (a b : Z) : Prop := ∃ k, b = a * k
 
+theorem zero_add (a : Z) : 0 + a = a := by
+  rw [add_comm, add_zero]
+
+theorem add_left_cancel {a b c : Z} (h : a + b = a + c) : b = c := by
+  have key : (-a) + (a + b) = (-a) + (a + c) := by rw [h]
+  rw [← add_assoc, ← add_assoc] at key
+  rw [add_comm (-a) a, add_neg, zero_add, zero_add] at key
+  exact key
+
+theorem mul_zero (a : Z) : a * 0 = 0 := by
+  have h : a * 0 + a * 0 = a * 0 + 0 := by
+    rw [← mul_add, add_zero, add_zero]
+  exact add_left_cancel h
+
+theorem right_distrib (a b c : Z) : (b + c) * a = b * a + c * a := by
+  rw [mul_comm, mul_add, mul_comm a b, mul_comm a c]
+
 end Z
+
+TheoremDoc Z.mul_add as "mul_add" in "Axioms"
+TheoremDoc Z.mul_assoc as "mul_assoc" in "Axioms"
+TheoremDoc Z.mul_comm as "mul_comm" in "Axioms"
+TheoremDoc Z.add_zero as "add_zero" in "Axioms"
+TheoremDoc Z.add_comm as "add_comm" in "Axioms"
+TheoremDoc Z.add_assoc as "add_assoc" in "Axioms"

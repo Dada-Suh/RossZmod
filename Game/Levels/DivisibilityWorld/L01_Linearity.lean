@@ -26,5 +26,7 @@ Have and want, enforced by a compiler.
 
 TacticDoc obtain "Splits an existential into witness and property."
 TacticDoc rw "Rewrites using an equation."
+TacticDoc exact "Provides the term directly."
 
 NewTactic obtain rw exact
+NewTheorem Z.mul_add Z.mul_assoc

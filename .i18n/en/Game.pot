@@ -8,6 +8,10 @@ msgstr "Project-Id-Version: Game v4.23.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit"
 
+#: Game.Levels.DivisibilityWorld.L02_Transitivity
+msgid "The witness was the product of the witnesses. Divisibility composes."
+msgstr ""
+
 #: GameServer.RpcHandlers
 msgid "level completed with warnings… 🎭"
 msgstr ""
@@ -17,8 +21,21 @@ msgid "This text appears on the starting page where one selects the world/level 
 "You can use **markdown**."
 msgstr ""
 
+#: Game.RossAxioms
+#: Game.RossAxioms
+#: Game.RossAxioms
+#: Game.RossAxioms
+#: Game.RossAxioms
+#: Game.RossAxioms
+msgid ""
+msgstr ""
+
 #: GameServer.RpcHandlers
 msgid "level completed! 🎉"
+msgstr ""
+
+#: Game.Levels.DivisibilityWorld
+msgid "The Ross axioms. Nothing else."
 msgstr ""
 
 #: GameServer.RpcHandlers
@@ -46,12 +63,8 @@ msgstr ""
 msgid "Rewrites using an equation."
 msgstr ""
 
-#: Game.Levels.DivisibilityWorld
-msgid "The Ross axioms. Nothing else. No Mathlib, no induction, no shortcuts."
-msgstr ""
-
-#: Game.Levels.DivisibilityWorld.L01_Linearity
-msgid "Linearity"
+#: Game.Levels.DivisibilityWorld.L02_Transitivity
+msgid "Transitivity"
 msgstr ""
 
 #: Game.Levels.DivisibilityWorld
@@ -59,7 +72,25 @@ msgid "Divisibility"
 msgstr ""
 
 #: Game.Levels.DivisibilityWorld.L01_Linearity
+msgid "Linearity"
+msgstr ""
+
+#: Game.Levels.DivisibilityWorld.L02_Transitivity
+msgid "If a divides b, and b divides c, does a divide c?\n"
+"\n"
+"Extract two witnesses. Build one."
+msgstr ""
+
+#: Game.Levels.DivisibilityWorld.L01_Linearity
 msgid "name the witness"
+msgstr ""
+
+#: Game.Levels.DivisibilityWorld.L02_Transitivity
+msgid "c = b * l, and b = a * k. Substitute."
+msgstr ""
+
+#: Game.Levels.DivisibilityWorld.L01_Linearity
+msgid "Provides the term directly."
 msgstr ""
 
 #: Game.Levels.DivisibilityWorld.L01_Linearity
@@ -83,4 +114,8 @@ msgstr ""
 
 #: Game
 msgid "Game Template"
+msgstr ""
+
+#: Game.Levels.DivisibilityWorld.L02_Transitivity
+msgid "obtain both"
 msgstr ""
