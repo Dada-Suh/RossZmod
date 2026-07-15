@@ -6,20 +6,26 @@ Level 3
 Title "Everything divides zero"
 
 Introduction "
+# Level 3
+
 Does 7 divide 0?
 
-Read the definition. Do not trust your instinct.
+🤔 **Read the definition, not your instinct.** `Divides a b` says `∃ k, b = a * k`.
+So we need a `k` with `0 = 7 * k`.
 "
 
 Statement (a : Z) : Z.Divides a 0 := by
-  Hint "You need some k with 0 = a * k."
+  Hint "👉 What single `k` makes `a * k = 0` for *every* `a`? Try `exact ⟨0, by rw [Z.mul_zero]⟩`"
   exact ⟨0, by rw [Z.mul_zero]⟩
 
 Conclusion "
-Every integer divides zero. Zero included.
+Level completed! 🎉
 
-Zero, however, divides only zero. The relation is not symmetric, and that
-asymmetry is why it is called divisibility and not equality.
+Every integer divides zero. **Zero included.**
+
+💡 **Pro-tip**
+
+But zero divides only zero. Divisibility is not symmetric.
 "
 
 NewTheorem Z.mul_zero
