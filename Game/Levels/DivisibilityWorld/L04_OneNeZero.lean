@@ -50,5 +50,5 @@ every theorem in this game is true of a set with exactly one element.
 The axioms you never think about are the ones holding up the floor.
 "
 
-NewTactic intro have
+NewTactic intro
 NewTheorem Z.pos_nonempty Z.not_pos_zero Z.mul_one Z.mul_zero
