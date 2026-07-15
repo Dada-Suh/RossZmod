@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.23.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-14\n"
+"POT-Creation-Date: 2026-07-15\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -10,15 +10,6 @@ msgstr "Project-Id-Version: Game v4.23.0\n"
 
 #: Game.Levels.DivisibilityWorld.L02_Transitivity
 msgid "The witness was the product of the witnesses. Divisibility composes."
-msgstr ""
-
-#: Game.Levels.DivisibilityWorld.L01_Linearity
-msgid "Closes the goal by supplying the term directly."
-msgstr ""
-
-#: Game
-msgid "This text appears on the starting page where one selects the world/level to play.\n"
-"You can use **markdown**."
 msgstr ""
 
 #: Game.RossAxioms
@@ -37,12 +28,16 @@ msgstr ""
 msgid "level completed! 🎉"
 msgstr ""
 
-#: GameServer.RpcHandlers
-msgid "intermediate goal solved! 🎉"
+#: Game.Levels.DivisibilityWorld.L04_NotSymmetric
+msgid "1 divides 0. Feed that to h."
 msgstr ""
 
 #: Game.Levels.DivisibilityWorld
 msgid "The Ross axioms. Nothing else."
+msgstr ""
+
+#: GameServer.RpcHandlers
+msgid "intermediate goal solved! 🎉"
 msgstr ""
 
 #: Game.Levels.DivisibilityWorld.L03_DividesZero
@@ -63,16 +58,29 @@ msgid "Does 7 divide 0?\n"
 msgstr ""
 
 #: Game.Levels.DivisibilityWorld.L01_Linearity
+msgid "Rewrites using an equation."
+msgstr ""
+
+#: Game
+msgid "Built at the Ross Mathematics Program, 2026.\n"
+"\n"
+"Source: https://github.com/Dada-Suh/RossZmod"
+msgstr ""
+
+#: Game.Levels.DivisibilityWorld.L04_NotSymmetric
+msgid "h2 says 0 divides 1. Extract its witness and see what it claims."
+msgstr ""
+
+#: Game.Levels.DivisibilityWorld
+msgid "Divisibility"
+msgstr ""
+
+#: Game.Levels.DivisibilityWorld.L01_Linearity
 msgid "Linearity"
 msgstr ""
 
-#. §0: `∃ k, b * x + c * y = a * k`
-#. §1: `b = a * k`
-#. §2: `c = a * l`
-#. §3: `b * x + c * y = a * (k * x + l * y)`
-#. §4: `exact ⟨k * x + l * y, by rw [hk, hl, Z.mul_add, Z.mul_assoc, Z.mul_assoc]⟩`
 #: Game.Levels.DivisibilityWorld.L01_Linearity
-msgid "🤔 We want §0, and Lean will not let us postpone naming that k. We must produce it first. Since §1 and §2, we get §3. 👉 Try §4"
+msgid "Provides the term directly."
 msgstr ""
 
 #: Game.Levels.DivisibilityWorld.L02_Transitivity
@@ -80,16 +88,14 @@ msgid "c = b * l, and b = a * k. Substitute."
 msgstr ""
 
 #: Game.Levels.DivisibilityWorld.L01_Linearity
-msgid "We've proven our first theorem! 🎉\n"
-"\n"
-"💡 **Pro-tip**\n"
-"\n"
-"Notice what Lean forced on us. We had to name the witness *before* we could prove anything about it. In Ross we call this **Have/Want**. Here it isn't advice. It's a compiler error."
+msgid "obtain the witnesses"
 msgstr ""
 
-#. §0: `obtain ⟨k, hk⟩ := hb`
 #: Game.Levels.DivisibilityWorld.L01_Linearity
-msgid "👉 Try §0 to unpack the first divisibility."
+msgid "Divides a b unfolds to: exists k, b = a * k.\n"
+"\n"
+"To USE one, extract with obtain.\n"
+"To PROVE one, supply a witness."
 msgstr ""
 
 #: Game.Levels.DivisibilityWorld.L02_Transitivity
@@ -100,40 +106,50 @@ msgstr ""
 msgid "level completed with warnings… 🎭"
 msgstr ""
 
-#: Game.Levels.DivisibilityWorld.L01_Linearity
-msgid "Rewrites the goal using an equation."
-msgstr ""
-
-#. §0: `obtain ⟨k, hk⟩ := h`
-#. §1: `h : ∃ k, P k`
-#: Game.Levels.DivisibilityWorld.L01_Linearity
-msgid "Unpacks an existential. §0 splits §1 into a witness and a proof."
-msgstr ""
-
-#: Game
-msgid "You should use this game as a template for your own game and add your own levels."
-msgstr ""
-
-#: Game
-msgid "Here you can put additional information about the game. It is accessible\n"
-"from the starting through the drop-down menu.\n"
+#: Game.Levels.DivisibilityWorld.L04_NotSymmetric
+msgid "The counterexample was 1 and 0.\n"
 "\n"
-"For example: Game version, Credits, Link to Github and Zulip, etc.\n"
-"\n"
-"Use **markdown**."
+"Read the statement!"
 msgstr ""
 
 #: Game
-msgid "Ross ℤ Game"
+#: Game
+msgid "The Ross ℤ Game"
 msgstr ""
 
 #: Game.Levels.DivisibilityWorld.L02_Transitivity
 msgid "Transitivity"
 msgstr ""
 
-#. §0: `hc`
+#. §0: `intro h`
+#: Game.Levels.DivisibilityWorld.L04_NotSymmetric
+msgid "Assume the claim, then break it. §0"
+msgstr ""
+
+#: Game.Levels.DivisibilityWorld.L04_NotSymmetric
+msgid "The statement is false"
+msgstr ""
+
+#. §0: `mathlib`
+#. §1: `induction`
+#: Game
+msgid "Welcome to **The Ross ℤ Game**. The object of this game is to build number theory\n"
+"over ℤ, the integers, from nothing but the Ross axioms.\n"
+"\n"
+"## What is Lean?\n"
+"\n"
+"Lean is a proof assistant. As we write proofs, a panel dynamically reports our\n"
+"**givens** and our **goals**. As goals get cleared, we stock an inventory of\n"
+"rigorous, *machine-verified* theorems that can be used to prove new goals.\n"
+"\n"
+"This game does **not** import §0. ***We start from scratch.*** We define ℤ\n"
+"as an ordered ring satisfying the well-ordering principle, and nothing else.\n"
+"\n"
+"There is no §1 tactic here. There is Well-Ordering, or there is nothing."
+msgstr ""
+
 #: Game.Levels.DivisibilityWorld.L01_Linearity
-msgid "Now do the same with §0."
+msgid "name the witness"
 msgstr ""
 
 #: Game.Levels.DivisibilityWorld.L02_Transitivity
@@ -142,41 +158,28 @@ msgid "If a divides b, and b divides c, does a divide c?\n"
 "Extract two witnesses. Build one."
 msgstr ""
 
-#. §0: `Divides a b`
-#. §1: `∃ k, b = a * k`
-#. §2: `obtain`
-#. §3: `hb`
-#. §4: `hc`
-#. §5: `obtain ⟨k, hk⟩ := hb`
-#. §6: `hb`
-#. §7: `k`
-#. §8: `hk : b = a * k`
+#: Game.Levels.DivisibilityWorld.L04_NotSymmetric
+msgid "Here is a printed claim.\n"
+"\n"
+"  For all a and b: if a divides b, then b divides a.\n"
+"\n"
+"Every level so far asked you to prove something true.\n"
+"\n"
+"This one does not."
+msgstr ""
+
 #: Game.Levels.DivisibilityWorld.L01_Linearity
-msgid "# Level 1\n"
-"\n"
-"Welcome to Divisibility World! We'll start with the workhorse of the entire game.\n"
-"\n"
-"## Divisibility\n"
-"\n"
-"The definition says:\n"
-"\n"
-"§0 means §1\n"
-"\n"
-"That existential is the whole story. To **use** a divisibility, we extract its witness. To **prove** one, we supply a witness.\n"
-"\n"
-"## The §2 tactic\n"
-"\n"
-"We have two divisibilities, §3 and §4, but each is locked inside an existential. 👉 Specifically, try\n"
-"\n"
-"§5\n"
-"\n"
-"This unpacks §6 into a witness §7 and the fact §8."
+msgid "Splits an existential into witness and property."
+msgstr ""
+
+#: Game
+msgid "Number theory from the Ross axioms. No Mathlib. No induction."
+msgstr ""
+
+#: Game.Levels.DivisibilityWorld.L01_Linearity
+msgid "Have and want, enforced by a compiler."
 msgstr ""
 
 #: Game.Levels.DivisibilityWorld.L03_DividesZero
 msgid "Everything divides zero"
-msgstr ""
-
-#: Game
-msgid "Game Template"
 msgstr ""
