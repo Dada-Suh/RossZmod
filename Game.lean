@@ -1,28 +1,24 @@
 import Game.Levels.DivisibilityWorld
 
--- Here's what we'll put on the title screen
-Title "Ross ℤ Game"
+Title "The Ross ℤ Game"
+
 Introduction
 "
-This text appears on the starting page where one selects the world/level to play.
-You can use **markdown**.
+Welcome! This is a game about building number theory over ℤ from the ground up — starting with nothing but the Ross axioms.
+
+If you've played the **FTAGame**, this'll feel familiar. Same idea: you write proofs, Lean checks every step, and as you clear goals you collect theorems you can reuse later.
+
+One rule though — **no Mathlib, no `induction`.** You get the axioms and that's it. Everything else, you build yourself.
 "
 
 Info "
-Here you can put additional information about the game. It is accessible
-from the starting through the drop-down menu.
+Built at the Ross Mathematics Program, 2026.
 
-For example: Game version, Credits, Link to Github and Zulip, etc.
-
-Use **markdown**.
+Source: https://github.com/Dada-Suh/RossZmod
 "
 
-/-! Information to be displayed on the servers landing page. -/
 Languages "en"
-CaptionShort "Game Template"
-CaptionLong "You should use this game as a template for your own game and add your own levels."
--- Prerequisites "" -- add this if your game depends on other games
--- CoverImage "images/cover.png"
+CaptionShort "The Ross ℤ Game"
+CaptionLong "Number theory built from the Ross axioms. No Mathlib, no induction — just you and the axioms."
 
-/-! Build the game. Show's warnings if it found a problem with your game. -/
 MakeGame

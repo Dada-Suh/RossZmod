@@ -10,21 +10,21 @@ Introduction "
 
 If `a` divides `b`, and `b` divides `c`, does `a` divide `c`?
 
-This should feel *very* similar to how we proved linearity.
+You already know the answer's yes. The fun part is that the proof is basically Level 1 again — same moves, so try it before reading the hints.
 "
 
 Statement (a b c : Z) (hab : Z.Divides a b) (hbc : Z.Divides b c) :
     Z.Divides a c := by
-  Hint "👉 Unpack both hypotheses with `obtain`."
+  Hint "👉 Crack open both with `obtain`."
   obtain ⟨k, hk⟩ := hab
   obtain ⟨l, hl⟩ := hbc
-  Hint "🤔 We have `b = a * k` and `c = b * l`. Substitute the first into the second. 👉 Try `exact ⟨k * l, by rw [hl, hk, Z.mul_assoc]⟩`"
+  Hint "🤔 We've got `b = a * k` and `c = b * l`. Sub the first into the second and the witness pops right out. 👉 Try `exact ⟨k * l, by rw [hl, hk, Z.mul_assoc]⟩`"
   exact ⟨k * l, by rw [hl, hk, Z.mul_assoc]⟩
 
 Conclusion "
-Level completed! 🎉
+Nice. 🎉
 
-The witness was the **product of the witnesses**. Divisibility composes.
+The witness turned out to be just the two witnesses multiplied together. Divisibility chains, and the chaining is literally multiplication.
 "
 
 NewTheorem Z.mul_assoc

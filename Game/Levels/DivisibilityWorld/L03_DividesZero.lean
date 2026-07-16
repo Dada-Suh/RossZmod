@@ -10,22 +10,17 @@ Introduction "
 
 Does 7 divide 0?
 
-🤔 **Read the definition, not your instinct.** `Divides a b` says `∃ k, b = a * k`.
-So we need a `k` with `0 = 7 * k`.
+🤔 Careful — go check the definition instead of trusting your gut. `Divides a b` means `∃ k, b = a * k`. So we just need some `k` with `0 = 7 * k`. Hmm.
 "
 
 Statement (a : Z) : Z.Divides a 0 := by
-  Hint "👉 What single `k` makes `a * k = 0` for *every* `a`? Try `exact ⟨0, by rw [Z.mul_zero]⟩`"
+  Hint "👉 What's the one `k` that makes `a * k = 0` no matter what `a` is? Try `exact ⟨0, by rw [Z.mul_zero]⟩`"
   exact ⟨0, by rw [Z.mul_zero]⟩
 
 Conclusion "
-Level completed! 🎉
+Done. 🎉
 
-Every integer divides zero. **Zero included.**
-
-💡 **Pro-tip**
-
-But zero divides only zero. Divisibility is not symmetric.
+Turns out every integer divides zero — yes, including zero itself. But watch out: it only goes one way. Zero divides *only* zero, so divisibility isn't symmetric. Easy to trip on that one.
 "
 
 NewTheorem Z.mul_zero

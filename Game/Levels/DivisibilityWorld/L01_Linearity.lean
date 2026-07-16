@@ -8,45 +8,43 @@ Title "Linearity"
 Introduction "
 # Level 1
 
-Welcome to Divisibility World! We'll start with the workhorse of the entire game.
+Okay, first level. This one's the workhorse — basically every later proof leans on it, so it's worth getting comfortable here.
 
 ## Divisibility
 
-The definition says:
+Here's the definition:
 
 `Divides a b` means `∃ k, b = a * k`
 
-That existential is the whole story. To **use** a divisibility, we extract its witness. To **prove** one, we supply a witness.
+So a divisibility is really just a hidden `k`. To **use** one, we dig the `k` out. To **prove** one, we hand over a `k`. That's the whole game, honestly.
 
 ## The `obtain` tactic
 
-We have two divisibilities, `hb` and `hc`, but each is locked inside an existential. 👉 Specifically, try
+We've got two divisibilities sitting there, `hb` and `hc`, but the `k`s are locked inside. 👉 Try
 
 `obtain ⟨k, hk⟩ := hb`
 
-This unpacks `hb` into a witness `k` and the fact `hk : b = a * k`.
+That cracks `hb` open into a witness `k` and the fact `hk : b = a * k`.
 "
 
 Statement (a b c x y : Z) (hb : Z.Divides a b) (hc : Z.Divides a c) :
     Z.Divides a (b * x + c * y) := by
-  Hint "👉 Try `obtain ⟨k, hk⟩ := hb` to unpack the first divisibility."
+  Hint "👉 Crack open the first one: `obtain ⟨k, hk⟩ := hb`"
   obtain ⟨k, hk⟩ := hb
-  Hint "Now do the same with `hc`."
+  Hint "Same move on `hc`."
   obtain ⟨l, hl⟩ := hc
-  Hint "🤔 We want `∃ k, b * x + c * y = a * k`, and Lean will not let us postpone naming that k. We must produce it first. Since `b = a * k` and `c = a * l`, we get `b * x + c * y = a * (k * x + l * y)`. 👉 Try `exact ⟨k * x + l * y, by rw [hk, hl, Z.mul_add, Z.mul_assoc, Z.mul_assoc]⟩`"
+  Hint "🤔 The goal wants `∃ k, b * x + c * y = a * k`, and Lean won't let us stall — we have to name that `k` up front. Since `b = a * k` and `c = a * l`, a little algebra gives `b * x + c * y = a * (k * x + l * y)`. So the witness is `k * x + l * y`. 👉 Try `exact ⟨k * x + l * y, by rw [hk, hl, Z.mul_add, Z.mul_assoc, Z.mul_assoc]⟩`"
   exact ⟨k * x + l * y, by rw [hk, hl, Z.mul_add, Z.mul_assoc, Z.mul_assoc]⟩
 
 Conclusion "
-We've proven our first theorem! 🎉
+First theorem down. 🎉
 
-💡 **Pro-tip**
-
-Notice what Lean forced on us. We had to name the witness *before* we could prove anything about it. In Ross we call this **Have/Want**. Here it isn't advice. It's a compiler error.
+Notice the thing Lean made you do: you had to *name the witness* before you could prove anything about it. That's exactly the Have/Want thing from Ross — except here it's not advice, it's the compiler refusing to move on. Kind of nice, actually.
 "
 
-TacticDoc obtain "Unpacks an existential. `obtain ⟨k, hk⟩ := h` splits `h : ∃ k, P k` into a witness and a proof."
+TacticDoc obtain "Cracks open an existential. `obtain ⟨k, hk⟩ := h` splits `h : ∃ k, P k` into a witness and a proof."
 TacticDoc rw "Rewrites the goal using an equation."
-TacticDoc exact "Closes the goal by supplying the term directly."
+TacticDoc exact "Closes the goal by handing over the term directly."
 
 NewTactic obtain rw exact
 NewTheorem Z.mul_add Z.mul_assoc

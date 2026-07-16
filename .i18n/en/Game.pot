@@ -8,15 +8,6 @@ msgstr "Project-Id-Version: Game v4.23.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit"
 
-#: Game
-msgid "This text appears on the starting page where one selects the world/level to play.\n"
-"You can use **markdown**."
-msgstr ""
-
-#: Game.Levels.DivisibilityWorld.L01_Linearity
-msgid "Closes the goal by supplying the term directly."
-msgstr ""
-
 #: Game.RossAxioms
 #: Game.RossAxioms
 #: Game.RossAxioms
@@ -37,6 +28,36 @@ msgstr ""
 msgid "level completed! 🎉"
 msgstr ""
 
+#: GameServer.RpcHandlers
+msgid "intermediate goal solved! 🎉"
+msgstr ""
+
+#: Game
+msgid "Number theory built from the Ross axioms. No Mathlib, no induction — just you and the axioms."
+msgstr ""
+
+#. §0: `rw [hzero] at hw`
+#. §1: `exact Z.not_pos_zero hw`
+#: Game.Levels.DivisibilityWorld.L04_OneNeZero
+msgid "Land it. 👉 §0, then §1"
+msgstr ""
+
+#: Game.Levels.DivisibilityWorld
+msgid "Welcome to **Divisibility World**! We'll build the divisibility relation from the\n"
+"ring axioms, then find out which axiom has been holding up the floor all along."
+msgstr ""
+
+#. §0: `obtain`
+#: Game.Levels.DivisibilityWorld.L02_Transitivity
+msgid "👉 Crack open both with §0."
+msgstr ""
+
+#: Game
+msgid "Built at the Ross Mathematics Program, 2026.\n"
+"\n"
+"Source: https://github.com/Dada-Suh/RossZmod"
+msgstr ""
+
 #. §0: `Divides a b`
 #. §1: `∃ k, b = a * k`
 #. §2: `k`
@@ -46,134 +67,7 @@ msgid "# Level 3\n"
 "\n"
 "Does 7 divide 0?\n"
 "\n"
-"🤔 **Read the definition, not your instinct.** §0 says §1.\n"
-"So we need a §2 with §3."
-msgstr ""
-
-#: GameServer.RpcHandlers
-msgid "intermediate goal solved! 🎉"
-msgstr ""
-
-#: Game.Levels.DivisibilityWorld
-msgid "Welcome to **Divisibility World**! We'll build the divisibility relation from the\n"
-"ring axioms, then find out which axiom has been holding up the floor all along."
-msgstr ""
-
-#. §0: `1 = 0`
-#. §1: `w = w * 1 = w * 0 = 0`
-#. §2: `have hzero : w = 0 := by rw [← Z.mul_one w, h, Z.mul_zero]`
-#: Game.Levels.DivisibilityWorld.L04_OneNeZero
-msgid "🤔 If §0, then §1. 👉 Try §2"
-msgstr ""
-
-#. §0: `1 ≠ 0`
-#. §1: `1 = 0`
-#. §2: `0 = 1`
-#. §3: `False`
-#. §4: `intro h`
-#: Game.Levels.DivisibilityWorld.L04_OneNeZero
-msgid "# Level 4\n"
-"\n"
-"Here is a fact you have used since you were four.\n"
-"\n"
-"§0\n"
-"\n"
-"🤔 **But why?** Look at the axioms. Ring axioms, order axioms, Well-Ordering.\n"
-"Which one rules out a world where §1?\n"
-"\n"
-"Consider the ring with a single element, where §2 and nothing else exists.\n"
-"Associativity holds. Commutativity holds. Distributivity holds. Trichotomy holds,\n"
-"since everything is zero. Well-Ordering holds vacuously.\n"
-"\n"
-"**Every axiom survives. Except one.**\n"
-"\n"
-"## Proof by contradiction\n"
-"\n"
-"We assume the opposite and derive §3. 👉 Try §4"
-msgstr ""
-
-#: Game.Levels.DivisibilityWorld
-msgid "Divisibility"
-msgstr ""
-
-#: Game.Levels.DivisibilityWorld.L01_Linearity
-msgid "Linearity"
-msgstr ""
-
-#: Game.Levels.DivisibilityWorld.L02_Transitivity
-msgid "Level completed! 🎉\n"
-"\n"
-"The witness was the **product of the witnesses**. Divisibility composes."
-msgstr ""
-
-#. §0: `∃ k, b * x + c * y = a * k`
-#. §1: `b = a * k`
-#. §2: `c = a * l`
-#. §3: `b * x + c * y = a * (k * x + l * y)`
-#. §4: `exact ⟨k * x + l * y, by rw [hk, hl, Z.mul_add, Z.mul_assoc, Z.mul_assoc]⟩`
-#: Game.Levels.DivisibilityWorld.L01_Linearity
-msgid "🤔 We want §0, and Lean will not let us postpone naming that k. We must produce it first. Since §1 and §2, we get §3. 👉 Try §4"
-msgstr ""
-
-#. §0: `b = a * k`
-#. §1: `c = b * l`
-#. §2: `exact ⟨k * l, by rw [hl, hk, Z.mul_assoc]⟩`
-#: Game.Levels.DivisibilityWorld.L02_Transitivity
-msgid "🤔 We have §0 and §1. Substitute the first into the second. 👉 Try §2"
-msgstr ""
-
-#: Game.Levels.DivisibilityWorld.L01_Linearity
-msgid "We've proven our first theorem! 🎉\n"
-"\n"
-"💡 **Pro-tip**\n"
-"\n"
-"Notice what Lean forced on us. We had to name the witness *before* we could prove anything about it. In Ross we call this **Have/Want**. Here it isn't advice. It's a compiler error."
-msgstr ""
-
-#: Game.Levels.DivisibilityWorld.L04_OneNeZero
-msgid "One is not equal to zero"
-msgstr ""
-
-#. §0: `obtain ⟨k, hk⟩ := hb`
-#: Game.Levels.DivisibilityWorld.L01_Linearity
-msgid "👉 Try §0 to unpack the first divisibility."
-msgstr ""
-
-#: GameServer.RpcHandlers
-msgid "level completed with warnings… 🎭"
-msgstr ""
-
-#. §0: `obtain`
-#: Game.Levels.DivisibilityWorld.L02_Transitivity
-msgid "👉 Unpack both hypotheses with §0."
-msgstr ""
-
-#: Game.Levels.DivisibilityWorld.L01_Linearity
-msgid "Rewrites the goal using an equation."
-msgstr ""
-
-#. §0: `obtain ⟨k, hk⟩ := h`
-#. §1: `h : ∃ k, P k`
-#: Game.Levels.DivisibilityWorld.L01_Linearity
-msgid "Unpacks an existential. §0 splits §1 into a witness and a proof."
-msgstr ""
-
-#. §0: `pos_nonempty`
-#: Game.Levels.DivisibilityWorld.L04_OneNeZero
-msgid "Level completed! 🎉\n"
-"\n"
-"💡 **Pro-tip**\n"
-"\n"
-"The axiom that did the work was §0: *some positive integer exists.*\n"
-"\n"
-"It is the most boring axiom on the list. Nobody ever cites it. And without it,\n"
-"every theorem in this game is true of a set with exactly one element.\n"
-"\n"
-"The axioms you never think about are the ones holding up the floor."
-msgstr ""
-
-#: Game
-msgid "You should use this game as a template for your own game and add your own levels."
+"🤔 Careful — go check the definition instead of trusting your gut. §0 means §1. So we just need some §2 with §3. Hmm."
 msgstr ""
 
 #. §0: `k`
@@ -181,21 +75,45 @@ msgstr ""
 #. §2: `a`
 #. §3: `exact ⟨0, by rw [Z.mul_zero]⟩`
 #: Game.Levels.DivisibilityWorld.L03_DividesZero
-msgid "👉 What single §0 makes §1 for *every* §2? Try §3"
+msgid "👉 What's the one §0 that makes §1 no matter what §2 is? Try §3"
 msgstr ""
 
+#: Game.Levels.DivisibilityWorld
+msgid "Divisibility"
+msgstr ""
+
+#: Game.Levels.DivisibilityWorld.L01_Linearity
+msgid "Closes the goal by handing over the term directly."
+msgstr ""
+
+#: Game.Levels.DivisibilityWorld.L01_Linearity
+msgid "Linearity"
+msgstr ""
+
+#: Game.Levels.DivisibilityWorld.L03_DividesZero
+msgid "Done. 🎉\n"
+"\n"
+"Turns out every integer divides zero — yes, including zero itself. But watch out: it only goes one way. Zero divides *only* zero, so divisibility isn't symmetric. Easy to trip on that one."
+msgstr ""
+
+#. §0: `induction`
 #: Game
-msgid "Here you can put additional information about the game. It is accessible\n"
-"from the starting through the drop-down menu.\n"
+msgid "Welcome! This is a game about building number theory over ℤ from the ground up — starting with nothing but the Ross axioms.\n"
 "\n"
-"For example: Game version, Credits, Link to Github and Zulip, etc.\n"
+"If you've played the **FTAGame**, this'll feel familiar. Same idea: you write proofs, Lean checks every step, and as you clear goals you collect theorems you can reuse later.\n"
 "\n"
-"Use **markdown**."
+"One rule though — **no Mathlib, no §0.** You get the axioms and that's it. Everything else, you build yourself."
 msgstr ""
 
-#. §0: `intro h`
+#. §0: `b = a * k`
+#. §1: `c = b * l`
+#. §2: `exact ⟨k * l, by rw [hl, hk, Z.mul_assoc]⟩`
+#: Game.Levels.DivisibilityWorld.L02_Transitivity
+msgid "🤔 We've got §0 and §1. Sub the first into the second and the witness pops right out. 👉 Try §2"
+msgstr ""
+
 #: Game.Levels.DivisibilityWorld.L04_OneNeZero
-msgid "👉 Assume the opposite: §0"
+msgid "One is not equal to zero"
 msgstr ""
 
 #. §0: `a`
@@ -209,79 +127,147 @@ msgid "# Level 2\n"
 "\n"
 "If §0 divides §1, and §2 divides §3, does §4 divide §5?\n"
 "\n"
-"This should feel *very* similar to how we proved linearity."
+"You already know the answer's yes. The fun part is that the proof is basically Level 1 again — same moves, so try it before reading the hints."
+msgstr ""
+
+#. §0: `obtain ⟨k, hk⟩ := h`
+#. §1: `h : ∃ k, P k`
+#: Game.Levels.DivisibilityWorld.L01_Linearity
+msgid "Cracks open an existential. §0 splits §1 into a witness and a proof."
+msgstr ""
+
+#. §0: `1 = 0`
+#. §1: `w = w * 1 = w * 0 = 0`
+#. §2: `have hzero : w = 0 := by rw [← Z.mul_one w, h, Z.mul_zero]`
+#: Game.Levels.DivisibilityWorld.L04_OneNeZero
+msgid "🤔 Now watch: if §0, then §1. So our positive number is secretly zero. 👉 Try §2"
+msgstr ""
+
+#. §0: `1 ≠ 0`
+#. §1: `0 = 1`
+#. §2: `1 = 0`
+#. §3: `intro h`
+#: Game.Levels.DivisibilityWorld.L04_OneNeZero
+msgid "# Level 4\n"
+"\n"
+"Time for a fact so obvious it feels silly to prove.\n"
+"\n"
+"§0\n"
+"\n"
+"🤔 But here's the thing — *which axiom actually rules this out?* Scan the list. Ring axioms, order axioms, Well-Ordering.\n"
+"\n"
+"Picture the ring with exactly one element, where §1 and that's the whole universe. Associativity? Fine. Commutativity, distributivity? Fine. Trichotomy? Sure, everything's zero. Well-Ordering? Holds, vacuously.\n"
+"\n"
+"**Every single axiom survives in that tiny world. Except one.** Let's find it.\n"
+"\n"
+"## Proof by contradiction\n"
+"\n"
+"We assume §2 and chase it until something breaks. 👉 Start with §3"
+msgstr ""
+
+#. §0: `pos_nonempty`
+#. §1: `obtain ⟨w, hw⟩ := Z.pos_nonempty`
+#: Game.Levels.DivisibilityWorld.L04_OneNeZero
+msgid "🔍 Peek at the axiom §0 — it promises there's at least one positive integer. Let's grab it. 👉 Try §1"
+msgstr ""
+
+#: GameServer.RpcHandlers
+msgid "level completed with warnings… 🎭"
+msgstr ""
+
+#: Game.Levels.DivisibilityWorld.L01_Linearity
+msgid "Rewrites the goal using an equation."
+msgstr ""
+
+#: Game.Levels.DivisibilityWorld.L01_Linearity
+msgid "First theorem down. 🎉\n"
+"\n"
+"Notice the thing Lean made you do: you had to *name the witness* before you could prove anything about it. That's exactly the Have/Want thing from Ross — except here it's not advice, it's the compiler refusing to move on. Kind of nice, actually."
+msgstr ""
+
+#. §0: `Divides a b`
+#. §1: `∃ k, b = a * k`
+#. §2: `k`
+#. §3: `k`
+#. §4: `k`
+#. §5: `obtain`
+#. §6: `hb`
+#. §7: `hc`
+#. §8: `k`
+#. §9: `obtain ⟨k, hk⟩ := hb`
+#. §10: `hb`
+#. §11: `k`
+#. §12: `hk : b = a * k`
+#: Game.Levels.DivisibilityWorld.L01_Linearity
+msgid "# Level 1\n"
+"\n"
+"Okay, first level. This one's the workhorse — basically every later proof leans on it, so it's worth getting comfortable here.\n"
+"\n"
+"## Divisibility\n"
+"\n"
+"Here's the definition:\n"
+"\n"
+"§0 means §1\n"
+"\n"
+"So a divisibility is really just a hidden §2. To **use** one, we dig the §3 out. To **prove** one, we hand over a §4. That's the whole game, honestly.\n"
+"\n"
+"## The §5 tactic\n"
+"\n"
+"We've got two divisibilities sitting there, §6 and §7, but the §8s are locked inside. 👉 Try\n"
+"\n"
+"§9\n"
+"\n"
+"That cracks §10 open into a witness §11 and the fact §12."
+msgstr ""
+
+#. §0: `intro h`
+#: Game.Levels.DivisibilityWorld.L04_OneNeZero
+msgid "👉 Assume the opposite and see what happens: §0"
+msgstr ""
+
+#: Game.Levels.DivisibilityWorld.L02_Transitivity
+msgid "Nice. 🎉\n"
+"\n"
+"The witness turned out to be just the two witnesses multiplied together. Divisibility chains, and the chaining is literally multiplication."
 msgstr ""
 
 #: Game
-msgid "Ross ℤ Game"
+#: Game
+msgid "The Ross ℤ Game"
+msgstr ""
+
+#. §0: `∃ k, b * x + c * y = a * k`
+#. §1: `k`
+#. §2: `b = a * k`
+#. §3: `c = a * l`
+#. §4: `b * x + c * y = a * (k * x + l * y)`
+#. §5: `k * x + l * y`
+#. §6: `exact ⟨k * x + l * y, by rw [hk, hl, Z.mul_add, Z.mul_assoc, Z.mul_assoc]⟩`
+#: Game.Levels.DivisibilityWorld.L01_Linearity
+msgid "🤔 The goal wants §0, and Lean won't let us stall — we have to name that §1 up front. Since §2 and §3, a little algebra gives §4. So the witness is §5. 👉 Try §6"
 msgstr ""
 
 #: Game.Levels.DivisibilityWorld.L02_Transitivity
 msgid "Transitivity"
 msgstr ""
 
-#: Game.Levels.DivisibilityWorld.L03_DividesZero
-msgid "Level completed! 🎉\n"
-"\n"
-"Every integer divides zero. **Zero included.**\n"
-"\n"
-"💡 **Pro-tip**\n"
-"\n"
-"But zero divides only zero. Divisibility is not symmetric."
+#. §0: `obtain ⟨k, hk⟩ := hb`
+#: Game.Levels.DivisibilityWorld.L01_Linearity
+msgid "👉 Crack open the first one: §0"
 msgstr ""
 
-#. §0: `rw [hzero] at hw`
-#. §1: `exact Z.not_pos_zero hw`
+#. §0: `pos_nonempty`
 #: Game.Levels.DivisibilityWorld.L04_OneNeZero
-msgid "Finish it. 👉 §0 then §1"
+msgid "Got it. 🎉\n"
+"\n"
+"So the whole proof came down to §0 — the axiom that just says *some positive integer exists*. It's the one nobody ever bothers to write down, and I didn't either at first. But pull it out and the one-element ring satisfies everything else, which means every theorem in this game would also be true of a set with a single point in it. Kind of wild that this one boring line is what keeps ℤ from collapsing."
 msgstr ""
 
 #. §0: `hc`
 #: Game.Levels.DivisibilityWorld.L01_Linearity
-msgid "Now do the same with §0."
-msgstr ""
-
-#. §0: `pos_nonempty`
-#. §1: `obtain ⟨w, hw⟩ := Z.pos_nonempty`
-#: Game.Levels.DivisibilityWorld.L04_OneNeZero
-msgid "🔍 The axiom §0 says a positive integer exists. 👉 Try §1"
-msgstr ""
-
-#. §0: `Divides a b`
-#. §1: `∃ k, b = a * k`
-#. §2: `obtain`
-#. §3: `hb`
-#. §4: `hc`
-#. §5: `obtain ⟨k, hk⟩ := hb`
-#. §6: `hb`
-#. §7: `k`
-#. §8: `hk : b = a * k`
-#: Game.Levels.DivisibilityWorld.L01_Linearity
-msgid "# Level 1\n"
-"\n"
-"Welcome to Divisibility World! We'll start with the workhorse of the entire game.\n"
-"\n"
-"## Divisibility\n"
-"\n"
-"The definition says:\n"
-"\n"
-"§0 means §1\n"
-"\n"
-"That existential is the whole story. To **use** a divisibility, we extract its witness. To **prove** one, we supply a witness.\n"
-"\n"
-"## The §2 tactic\n"
-"\n"
-"We have two divisibilities, §3 and §4, but each is locked inside an existential. 👉 Specifically, try\n"
-"\n"
-"§5\n"
-"\n"
-"This unpacks §6 into a witness §7 and the fact §8."
+msgid "Same move on §0."
 msgstr ""
 
 #: Game.Levels.DivisibilityWorld.L03_DividesZero
 msgid "Everything divides zero"
-msgstr ""
-
-#: Game
-msgid "Game Template"
 msgstr ""
